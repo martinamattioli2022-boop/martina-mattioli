@@ -53,3 +53,16 @@ h3{font:500 19px var(--hd);margin:0 0 8px}
 .ct .card{display:block;color:var(--ink)}.ct .card span{font:400 13px var(--mono);color:var(--pink2);display:block;margin-bottom:6px}
 footer{border-top:1px solid var(--line);text-align:center;padding:26px 22px calc(26px + env(safe-area-inset-bottom,0px));font:400 12px var(--mono);color:var(--mute)}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:36px}.ph{max-width:300px;order:-1}.chip{left:8px}.pub{grid-template-columns:1fr;gap:6px}main{padding-top:30px}}
+
+/* research page, blog */
+.rs{padding:36px 0 30px;border-top:1px solid var(--line);margin-top:30px}
+.rs:first-of-type{margin-top:34px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px}
+.cols h4{font:500 12px var(--mono);color:var(--pink2);margin:0 0 6px;letter-spacing:.06em;text-transform:uppercase}
+.cols .list{margin:0}.cols .list li{font-size:14.5px}.cols .list li:last-child{border-bottom:0}
+.cols .card:hover{transform:none}
+.back{font:500 13px var(--mono);display:inline-block;margin-bottom:26px}
+.ptitle{margin:10px 0 24px}
+.prose{max-width:680px}.prose p{font-size:18px;line-height:1.75;color:var(--mute);margin:0 0 22px}
+#blog-list .card{display:block;color:var(--ink)}
+#blog-list .card h3{font-size:21px}
