@@ -1,142 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Martina Mattioli — Epistemology of Machine Learning &amp; Explainable AI</title>
-<meta name="description" content="Postdoctoral researcher working on the epistemology of machine learning and philosophy-informed explainable AI in healthcare.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header><nav>
-<a class="logo" href="#home">martina<b>.</b>mattioli</a>
-<ul>
-<li><a class="l" href="#home" data-p="home">Home</a></li>
-<li><a class="l" href="#research" data-p="research">Research</a></li>
-<li><a class="l" href="#publications" data-p="publications">Publications</a></li>
-<li><a class="l" href="#blog" data-p="blog">Blog</a></li>
-<li><a class="l" href="#contact" data-p="contact">Contact</a></li>
-</ul></nav></header>
-<main>
+:root{--bg:#07050f;--bg2:#0f0b1e;--card:#110d22;--ink:#ffffff;--mute:#cfcae6;--pink:#ff2d95;--pink2:#ff5cae;--line:rgba(255,45,149,.28);
+--hd:'Space Grotesk',system-ui,sans-serif;--bd:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
 
-<section class="page" id="p-home">
-<div class="hero">
-<div>
-<span class="tag">// postdoctoral researcher</span>
-<h1>What does it mean for an AI to <em>explain</em>?</h1>
-<p class="lead">I work at the intersection of epistemology and machine learning, bringing the philosophy of science to bear on explainable AI, especially in healthcare.</p>
-<div class="btns"><a class="btn p" href="#research">Explore my research</a><a class="btn" href="#blog">Read the blog</a></div>
-</div>
-<div class="ph"><img alt="Portrait of Martina Mattioli" src="photo.jpg"></div>
-</div>
-<div class="facts">
-<div><b>Postdoctoral Researcher</b>College of Mathematical Medicine, Zhejiang Normal University</div>
-<div><b>Ph.D. in AI for Industry 4.0</b>Ca’ Foscari University of Venice</div>
-<div><b>Supervisor</b>Prof. Marcello Pelillo</div>
-</div>
-</section>
 
-<section class="page" id="p-research">
-<span class="tag">// research</span>
-<h2>Where machine learning meets epistemology</h2>
-<p class="sub">Philosophy of science and ML share deep similarities. Machine learning has even been called the “experimental philosophy of science”. My work connects the two fields systematically, with a focus on explanation, causality and induction.</p>
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--bd);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 85% 0%,rgba(255,45,149,.16),transparent 70%),radial-gradient(500px 500px at 0% 60%,rgba(255,45,149,.06),transparent 70%),linear-gradient(var(--bg),var(--bg))}
+a{color:var(--pink2);text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+nav{max-width:1040px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font:700 18px var(--hd);color:var(--ink)}.logo b{color:var(--pink)}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a.l{font:500 13px var(--mono);color:var(--mute);padding:7px 13px;border-radius:99px;display:block}
+nav a.l.on{background:var(--pink);color:#fff}
+nav a.l:hover{color:var(--ink)}nav a.l.on:hover{color:#fff}
+main{max-width:1040px;margin:auto;padding:48px 22px 80px}
+.page{display:none;animation:in .5s ease}.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.tag{font:500 13px var(--mono);color:var(--pink2);letter-spacing:.04em}
+h1{font:700 clamp(38px,6vw,68px)/1.05 var(--hd);margin:14px 0 18px;letter-spacing:-.03em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--pink),var(--pink2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font:700 clamp(28px,4vw,40px)/1.1 var(--hd);margin:0 0 8px;letter-spacing:-.02em}
+h3{font:500 19px var(--hd);margin:0 0 8px}
+.lead{font-size:18px;color:var(--mute);max-width:560px}
+.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{font:500 14px var(--hd);padding:12px 22px;border-radius:99px;border:1px solid var(--pink);color:var(--ink);display:inline-block}
+.btn.p{background:var(--pink);color:#fff;box-shadow:0 8px 28px -8px var(--pink)}
+.btn:hover{transform:translateY(-2px)}
+.ph{position:relative;max-width:380px;justify-self:center}
+.ph::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border-radius:200px 200px 28px 28px;background:var(--pink);opacity:1}
+.ph img{position:relative;width:100%;display:block;border-radius:200px 200px 28px 28px;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
+.chip{position:absolute;left:-18px;bottom:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 14px;font:500 12px var(--mono);color:var(--pink2);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:.25s}
+.card:hover{border-color:var(--pink);transform:translateY(-3px)}
+.card p{color:var(--mute);margin:0;font-size:15px}
+.n{font:500 12px var(--mono);color:var(--pink);display:block;margin-bottom:12px}
+.sub{color:var(--mute);max-width:640px;margin:0 0 6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:56px;padding-top:30px;border-top:1px solid var(--line)}
+.facts div{font-size:14px;color:var(--mute)}.facts b{display:block;font:700 15px var(--hd);color:var(--ink);margin-bottom:2px}
+.pub{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.yr{font:700 26px var(--hd);color:var(--pink)}
+.pub h3{font-size:18px;line-height:1.35}.pub .au{color:var(--mute);font-size:14px}
+.pub .ve{font:400 13px var(--mono);color:var(--pink2);margin-top:6px}
+.new{font:500 10px var(--mono);background:var(--pink);color:#fff;border-radius:99px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+.list{list-style:none;padding:0;margin:20px 0 0}.list li{padding:14px 0 14px 22px;border-bottom:1px solid var(--line);position:relative;color:var(--mute)}
+.list li::before{content:"";position:absolute;left:0;top:24px;width:8px;height:8px;border-radius:50%;background:var(--pink)}.list b{color:var(--ink);font-weight:500}
+.sec{margin-top:54px}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
+.ct .card{display:block;color:var(--ink)}.ct .card span{font:400 13px var(--mono);color:var(--pink2);display:block;margin-bottom:6px}
+footer{border-top:1px solid var(--line);text-align:center;padding:26px 22px calc(26px + env(safe-area-inset-bottom,0px));font:400 12px var(--mono);color:var(--mute)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:36px}.ph{max-width:300px;order:-1}.chip{left:8px}.pub{grid-template-columns:1fr;gap:6px}main{padding-top:30px}}
 
-<div class="rs"><span class="n">01</span><h3>Epistemology meets machine learning</h3>
-<p class="sub">A monograph with Pelillo on how induction, causality and explanation shape both the scientific method and ML itself.</p>
-<div class="cols">
-<div class="card"><h4>Current</h4><ul class="list"><li><b>Epistemology of Machine Learning: Induction, Causality, Explanation</b> — Springer, Cognitive Technologies (forthcoming)</li><li>Tutorial at ECAI 2024</li></ul></div>
-<div class="card"><h4>Next</h4><ul class="list"><li>Teaching and community-building: tutorials, summer-school modules and a workshop on philosophy of science and ML, planned at ECAI 2027</li></ul></div>
-</div></div>
-
-<div class="rs"><span class="n">02</span><h3>Scientific explanation</h3>
-<p class="sub">The debate on scientific explanation rarely reaches XAI. I compare the two historically and use philosophical tools to bring the conceptual rigor XAI is often said to lack.</p>
-<div class="cols">
-<div class="card"><h4>Current</h4><ul class="list"><li><b>Understanding XAI through the Philosopher’s Lens</b> — ECAI 2024</li><li><b>The Missing Link: A Case for Philosophy-Informed XAI</b> — in preparation</li></ul></div>
-<div class="card"><h4>Next</h4><ul class="list"><li>From principles to evaluation: turning five principles (object of explanation, question-relativity, understanding, causal vs. associational information, truth/approximation) into testable criteria and checklists</li><li>From explaining the model to explaining the world: XAI for scientific inference and hypothesis generation</li><li>A reporting template stating what a method explains, what it distorts, and whether its information is causal</li></ul></div>
-</div></div>
-
-<div class="rs"><span class="n">03</span><h3>The black box</h3>
-<p class="sub">Born in WWII and adopted by cyberneticists, the black-box metaphor is richer than it looks. Systems fall into different kinds of black box depending on determinacy and observability.</p>
-<div class="cols">
-<div class="card"><h4>Current</h4><ul class="list"><li><b>The Black Box Metaphor in Machine Learning and Pattern Recognition: A Philosophical Perspective</b> — under review</li></ul></div>
-<div class="card"><h4>Next</h4><ul class="list"><li>Explanatory depth: a measure of how deep an explanation is, distinct from how opaque a system is, drawing on Bunge and interventionist accounts</li><li>Guidelines for regulators, hospitals and developers on what kind of “box” a system is for a given stakeholder</li></ul></div>
-</div></div>
-
-<div class="rs"><span class="n">04</span><h3>Medical explanation</h3>
-<p class="sub">In medicine, patients are in a vulnerable epistemic position. I draw on the philosophy of science and medicine, on causality, trust and epistemic adequacy, to derive principles for medical XAI, and I am conducting a systematic review of how concepts like trust, understanding and accountability are defined and operationalized.</p>
-<div class="cols">
-<div class="card"><h4>Current</h4><ul class="list"><li><b>Scientific Explanations in Health Sciences: Causality, Trust, and Epistemic Adequacy</b> — ExplImed 2026, IJCAI-ECAI</li><li><b>The Concept of Explainability in Medicine</b> — philosophical review, in preparation</li></ul></div>
-<div class="card"><h4>Next</h4><ul class="list"><li>Empirical studies with clinicians that separate trust, understanding and satisfaction</li><li>Pluralistic causality: “web of causation” views, including traditional Chinese medicine, informing computational causal models</li><li>Design principles and an evaluation protocol for medical XAI</li></ul></div>
-</div></div>
-
-<div class="rs"><h3>Why interdisciplinary</h3>
-<p class="sub">XAI lacks a unified conceptual foundation, while philosophy has debated what makes an explanation adequate for over a century. Philosophers can clarify what a concept requires, ML researchers can say what a method provides, and clinicians can say what a decision needs. Only together can we build explanations that are technically sound, epistemically justified and clinically useful.</p>
-<div class="cols">
-<div class="card"><h4>Collaborate on</h4><p>Clinical decision-making and AI in practice</p></div>
-<div class="card"><h4>Collaborate on</h4><p>Causal ML, interpretability, uncertainty, adversarial ML</p></div>
-<div class="card"><h4>Collaborate on</h4><p>Philosophy of science, medicine and AI</p></div>
-<div class="card"><h4>Collaborate on</h4><p>HCI and cognitive science: measuring understanding and justified trust</p></div>
-</div></div>
-
-<div class="sec"><h2>Talks &amp; tutorials</h2>
-<ul class="list">
-<li><b>The Epistemology of Machine Learning: Induction, Causality, Explanation</b> — tutorial at ECAI 2024, with Marcello Pelillo (Oct. 2024)</li>
-<li><b>Understanding XAI through the Philosopher’s Lens</b> — invited talk, 4th Workshop on Data Meets Applied Ontologies in Explainable AI, ECAI (Oct. 2024)</li>
-<li><b>Facial Emotion Recognition in Digital Identity Systems</b> — Brussels Summer Academy for Global Privacy Law, VUB (Jul. 2024)</li>
-</ul></div>
-</section>
-
-<section class="page" id="p-publications">
-<span class="tag">// publications</span>
-<h2>Publications</h2>
-<p class="sub">Full list on <a href="https://scholar.google.com/citations?user=cgUXf_MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></p>
-<div style="margin-top:18px">
-<div class="pub"><div class="yr">2026</div><div><h3>Scientific Explanations in Health Sciences: Causality, Trust, and Epistemic Adequacy<span class="new">NEW</span></h3><div class="au"><b>M. Mattioli</b>, M. Pelillo</div><div class="ve">Third Workshop on Explainable AI for the Medical Domain (ExplImed 2026) · IJCAI-ECAI 2026, Bremen · CEUR Workshop Proceedings</div></div></div>
-<div class="pub"><div class="yr">2024</div><div><h3>Understanding XAI through the Philosopher’s Lens: A Historical Perspective</h3><div class="au"><b>M. Mattioli</b>, A. E. Cinà, M. Pelillo</div><div class="ve">ECAI 2024 · IOS Press · pp. 987–994</div></div></div>
-<div class="pub"><div class="yr">2024</div><div><h3>Not in My Face: Challenges and Ethical Considerations in Automatic Face Emotion Recognition Technology</h3><div class="au"><b>M. Mattioli</b>, F. Cabitza</div><div class="ve">Machine Learning and Knowledge Extraction, 6(4), 2201–2231</div></div></div>
-<div class="pub"><div class="yr">2022</div><div><h3>The Unbearable (Technical) Unreliability of Automated Facial Emotion Recognition</h3><div class="au">F. Cabitza, A. Campagner, <b>M. Mattioli</b></div><div class="ve">Big Data &amp; Society, 9(2)</div></div></div>
-</div>
-<div class="sec"><h2>Forthcoming &amp; in progress</h2>
-<ul class="list">
-<li><b>Epistemology of Machine Learning: Induction, Causality, Explanation</b> — M. Mattioli, M. Pelillo. Springer, Cognitive Technologies (forthcoming)</li>
-<li><b>The Black Box Metaphor in Machine Learning and Pattern Recognition: A Philosophical Perspective</b> — Mattioli, Cinà, Pelillo. Under review</li>
-<li><b>The Missing Link: A Case for Philosophy-Informed XAI</b> — Mattioli, Cinà, Pelillo. In preparation</li>
-<li><b>The Concept of Explainability in Medicine: A Philosophical Review of Medical XAI Foundations</b> — Mattioli, Pelillo. In preparation</li>
-</ul></div>
-</section>
-
-<section class="page" id="p-blog">
-<span class="tag">// blog</span>
-<h2>Notes on AI</h2>
-<p class="sub">Thoughts on explanation, knowledge and what it means to trust a machine.</p>
-<div class="grid" id="blog-list"></div>
-</section>
-
-<section class="page" id="p-post">
-<a class="back" href="#blog">← All posts</a>
-<article id="post"></article>
-</section>
-
-<section class="page" id="p-contact">
-<span class="tag">// contact</span>
-<h2>Let’s talk</h2>
-<p class="sub">Interested in collaborating on the philosophy of AI, explainability in medicine, or the epistemology of machine learning? Get in touch.</p>
-<div class="ct">
-<a class="card" href="mailto:martina.mattioli@unive.it"><span>email</span>martina.mattioli@unive.it</a>
-<a class="card" href="https://scholar.google.com/citations?user=cgUXf_MAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span>scholar</span>Google Scholar profile ↗</a>
-</div>
-<div class="sec">
-<h2>Education</h2>
-<ul class="list">
-<li><b>Ph.D. in Artificial Intelligence for Industry 4.0</b> — Ca’ Foscari University of Venice, with Polytechnic University of Turin (2022 – 2026)</li>
-<li><b>M.Sc. in Theory and Technology of Communication</b> — University of Milano-Bicocca (2019 – 2022)</li>
-<li><b>B.A. in Communication, Innovation and Multimedia Studies</b> — University of Pavia (2015 – 2019)</li>
-</ul></div>
-</section>
-
-</main>
-<footer>© 2026 Martina Mattioli · epistemology × machine learning</footer>
-<script src="script.js"></script>
-</body>
-</html>
+/* research page, blog */
+.rs{padding:36px 0 30px;border-top:1px solid var(--line);margin-top:30px}
+.rs:first-of-type{margin-top:34px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px}
+.cols h4{font:500 12px var(--mono);color:var(--pink2);margin:0 0 6px;letter-spacing:.06em;text-transform:uppercase}
+.cols .list{margin:0}.cols .list li{font-size:14.5px}.cols .list li:last-child{border-bottom:0}
+.cols .card:hover{transform:none}
+.back{font:500 13px var(--mono);display:inline-block;margin-bottom:26px}
+.ptitle{margin:10px 0 24px}
+.prose{max-width:680px}.prose p{font-size:18px;line-height:1.75;color:var(--mute);margin:0 0 22px}
+#blog-list .card{display:block;color:var(--ink)}
+#blog-list .card h3{font-size:21px}
